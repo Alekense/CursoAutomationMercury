@@ -45,7 +45,7 @@ public class Tests {
 	
 	@Test
 	public void pruebaUno() {
-		WebDriverManager.setWindowSize(driver, "fullscreen");
+		//WebDriverManager.setWindowSize(driver, "fullscreen");
 		//driver.switchTo().window(tabs.get(1)).navigate().to("https://www.infobae.com/");
 		//driver.switchTo().window(tabs.get(0));
 		PageLogin pageLogin = new PageLogin(driver);

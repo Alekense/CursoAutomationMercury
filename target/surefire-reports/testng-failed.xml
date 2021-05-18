@@ -6,6 +6,8 @@
       <class name="tests.Tests">
         <methods>
           <include name="pruebaUno"/>
+          <include name="pruebaCantidadDeCampos"/>
+          <include name="pruebaDos"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>

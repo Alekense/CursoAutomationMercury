@@ -6,12 +6,18 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.testng.Assert;
 
 import helpers.Helpers;
 
 public class PageLogin {
 	private WebDriver driver;
+	
+	//@FindBy(how=How.NAME,using="userName")
+	//private WebElement userFieldElement;
+	
 	private By userField;
 	private By passwordField;
 	private By loginButton;
@@ -27,7 +33,9 @@ public class PageLogin {
 		fields = By.tagName("input");
 	}
 	
-	public void login (String user, String pass) {		
+	public void login (String user, String pass) {
+		//System.out.println(userFieldElement);
+		//userFieldElement.sendKeys(user);
 		driver.findElement(userField).sendKeys(user);
 		driver.findElement(passwordField).sendKeys(pass);
 		driver.findElement(loginButton).click();		

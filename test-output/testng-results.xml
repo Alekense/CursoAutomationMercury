@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8769" started-at="2021-05-18T11:33:11 ART" finished-at="2021-05-18T11:33:20 ART">
+  <suite name="Default suite" duration-ms="8494" started-at="2021-05-18T16:26:29 ART" finished-at="2021-05-18T16:26:37 ART">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8769" started-at="2021-05-18T11:33:11 ART" finished-at="2021-05-18T11:33:20 ART">
+    <test name="Default test" duration-ms="8494" started-at="2021-05-18T16:26:29 ART" finished-at="2021-05-18T16:26:37 ART">
       <class name="tests.Tests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.Tests@5a4aa2f2]" name="setUp" is-config="true" duration-ms="6676" started-at="2021-05-18T11:33:11 ART" finished-at="2021-05-18T11:33:18 ART">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.Tests@5a4aa2f2]" name="setUp" is-config="true" duration-ms="6296" started-at="2021-05-18T16:26:29 ART" finished-at="2021-05-18T16:26:35 ART">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="pruebaCantidadDeCampos()[pri:0, instance:tests.Tests@5a4aa2f2]" name="pruebaCantidadDeCampos" duration-ms="1706" started-at="2021-05-18T11:33:18 ART" finished-at="2021-05-18T11:33:19 ART">
+        <test-method status="PASS" signature="pruebaUno()[pri:0, instance:tests.Tests@5a4aa2f2]" name="pruebaUno" duration-ms="1880" started-at="2021-05-18T16:26:35 ART" finished-at="2021-05-18T16:26:37 ART">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pruebaCantidadDeCampos -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.Tests@5a4aa2f2]" name="tearDown" is-config="true" duration-ms="335" started-at="2021-05-18T11:33:19 ART" finished-at="2021-05-18T11:33:20 ART">
+        </test-method> <!-- pruebaUno -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.Tests@5a4aa2f2]" name="tearDown" is-config="true" duration-ms="272" started-at="2021-05-18T16:26:37 ART" finished-at="2021-05-18T16:26:37 ART">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=pruebaCantidadDeCampos status=SUCCESS method=Tests.pruebaCantidadDeCampos()[pri:0, instance:tests.Tests@5a4aa2f2] output={null}]]]>
+                <![CDATA[[TestResult name=pruebaUno status=SUCCESS method=Tests.pruebaUno()[pri:0, instance:tests.Tests@5a4aa2f2] output={null}]]]>
               </value>
             </param>
           </params>
