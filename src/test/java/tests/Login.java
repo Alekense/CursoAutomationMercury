@@ -25,24 +25,7 @@ import pages.PageLogin;
 import pages.PageLogon;
 import pages.PageReservation;
 
-public class Tests {
-	private WebDriver driver;
-	ArrayList<String> tabs;
-	@BeforeMethod
-	public void setUp() {
-		System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--no-proxy-server");
-		driver = new ChromeDriver(options);
-		//driver.manage().window().setPosition(new Point(400, 300));
-		driver.navigate().to("http://demo.guru99.com/test/newtours/index.php");
-		//JavascriptExecutor javaScriptExecutor = (JavascriptExecutor)driver;
-		//String googleWindow = "window.open('http://www.google.com')";
-		//javaScriptExecutor.executeScript(googleWindow);
-		//tabs = new ArrayList<String>(driver.getWindowHandles());
-		Helpers.sleep(driver);
-	}
-	
+public class Login extends CondicionesComunes{	
 	@Test(description = "Login Correcto")
 	public void pruebaUno() {
 		//WebDriverManager.setWindowSize(driver, "fullscreen");
@@ -54,7 +37,7 @@ public class Tests {
 		pageLogon.assertLogonPage();				
 	}
 	
-	@Test(description = "Maximizar y abrir pagina de reservas")
+	@Test(description = "Maximizar y abrir pagina de reservas",enabled = false)
 	public void pruebaDos() {
 		WebDriverManager.setWindowSize(driver, "maximized");
 		PageLogin pageLogin = new PageLogin(driver);
@@ -62,41 +45,18 @@ public class Tests {
 		pageLogin.flights();
 		pageReservation.assertPage();				
 	}
-	
-	@Test(description = "Redimensionar y setear reserva")
-	public void pruebaTres() {
-		WebDriverManager.setWindowSize(driver, 800, 600);
-		PageLogin pageLogin = new PageLogin(driver);
-		PageReservation pageReservation = new PageReservation(driver);
-		pageLogin.flights();
-		pageReservation.selectPassengers(2);
-		pageReservation.selectFromPort(3);
-		pageReservation.selectToPort("Frankfurt");		
-	}
-	
-	@Test(description="Verificar el array tagname y el logueo con campos")
+		
+	@Test(description="Verificar el array tagname y el logueo con campos",enabled = false)
 	public void pruebaCantidadDeCampos() {		
 		PageLogin pageLogin = new PageLogin(driver);
 		pageLogin.verifyFields();
 		pageLogin.fields_login("user", "user");
 	}
 	
-	@Test(description = "Obtener el titulo de la pagina y utilizarlo")
+	@Test(description = "Obtener el titulo de la pagina y utilizarlo",enabled = false)
 	public void pruebaTituloEnUsuario() {
 		PageLogin pageLogin = new PageLogin(driver);
 		pageLogin.putTitleInUserField();
-	}
-	
-	@AfterMethod
-	public void tearDown(ITestResult result) {
-		String ok = "OK", error = "ERROR";
-		System.out.println("El test " + result.getMethod().getDescription() + "resulto: "+ (result.getStatus()==1?ok:error));
-		if(!result.isSuccess()) {
-			Screenshooter.takeScreenshot("ERROR", driver);
-		}
-		//driver.switchTo().window(tabs.get(1)).close();
-		//driver.switchTo().window(tabs.get(0)).close();
-		driver.close();
 	}
 
 }
