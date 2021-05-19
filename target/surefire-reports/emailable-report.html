@@ -9,43 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">tests.Tests</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">36.802</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">32.131</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">tests.Tests</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">tests.Tests</td><td><a href="#m0">pruebaCantidadDeCampos</a></td><td rowspan="1">1621365844515</td><td rowspan="1">30</td></tr><tr class="failedeven"><td><a href="#m1">pruebaDos</a></td><td rowspan="1">1621365851769</td><td rowspan="1">10703</td></tr><tr class="failedeven"><td><a href="#m2">pruebaUno</a></td><td rowspan="1">1621365874689</td><td rowspan="1">1</td></tr><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.Tests</td><td><a href="#m3">pruebaTres</a></td><td rowspan="1">1621365867823</td><td rowspan="1">1559</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">tests.Tests</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">tests.Tests</td><td><a href="#m0">pruebaCantidadDeCampos</a></td><td rowspan="1">1621433401035</td><td rowspan="1">270</td></tr><tr class="passedeven"><td><a href="#m1">pruebaDos</a></td><td rowspan="1">1621433408336</td><td rowspan="1">1217</td></tr><tr class="passedeven"><td><a href="#m2">pruebaTituloEnUsuario</a></td><td rowspan="1">1621433414417</td><td rowspan="1">194</td></tr><tr class="passedeven"><td><a href="#m3">pruebaTres</a></td><td rowspan="1">1621433419588</td><td rowspan="1">1833</td></tr><tr class="passedeven"><td><a href="#m4">pruebaUno</a></td><td rowspan="1">1621433426187</td><td rowspan="1">1334</td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">tests.Tests#pruebaCantidadDeCampos</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at pages.PageLogin.login(PageLogin.java:38)
-	at tests.Tests.pruebaCantidadDeCampos(Tests.java:81)
-	at java.util.ArrayList.forEach(ArrayList.java:1255)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.Tests#pruebaDos</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[3]/td/font&quot;}
-  (Session info: chrome=90.0.4430.212)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;W10BOOKCORDEROA&apos;, ip: &apos;172.24.48.68&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\ferrufia\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ea4d78492993a1f12fd2e11f2e2d1b48
-*** Element info: {Using=xpath, value=/html/body/div[2]/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[3]/td/font}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pages.PageReservation.assertPage(PageReservation.java:27)
-	at tests.Tests.pruebaDos(Tests.java:63)
-	at java.util.ArrayList.forEach(ArrayList.java:1255)
-... Removed 40 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.Tests#pruebaUno</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at pages.PageLogin.login(PageLogin.java:38)
-	at tests.Tests.pruebaUno(Tests.java:53)
-	at java.util.ArrayList.forEach(ArrayList.java:1255)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Command line test</h2><h3 id="m0">tests.Tests#pruebaCantidadDeCampos</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.Tests#pruebaDos</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.Tests#pruebaTituloEnUsuario</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">tests.Tests#pruebaTres</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.Tests#pruebaUno</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

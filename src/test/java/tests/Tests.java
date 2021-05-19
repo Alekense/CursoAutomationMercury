@@ -81,6 +81,12 @@ public class Tests {
 		pageLogin.fields_login("user", "user");
 	}
 	
+	@Test
+	public void pruebaTituloEnUsuario() {
+		PageLogin pageLogin = new PageLogin(driver);
+		pageLogin.putTitleInUserField();
+	}
+	
 	@AfterMethod
 	public void tearDown(ITestResult result) {
 		if(!result.isSuccess()) {

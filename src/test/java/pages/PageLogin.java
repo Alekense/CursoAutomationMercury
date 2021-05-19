@@ -52,6 +52,12 @@ public class PageLogin {
 		Assert.assertTrue(fields.size()==4);
 	}
 	
+	public void putTitleInUserField() {
+		String title = driver.getTitle();
+		userFieldElement.sendKeys(title);
+		Assert.assertEquals("Welcome: Mercury Tours", title);
+	}
+	
 	public void flights() {
 		driver.findElement(flightsLink).click();
 		Helpers.sleep(driver);
