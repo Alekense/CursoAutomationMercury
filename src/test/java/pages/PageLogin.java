@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import helpers.Helpers;
@@ -15,44 +15,41 @@ import helpers.Helpers;
 public class PageLogin {
 	private WebDriver driver;
 	
-	//@FindBy(how=How.NAME,using="userName")
-	//private WebElement userFieldElement;
+	@FindBy(name = "userName")
+	private WebElement userFieldElement;
+	@FindBy(name = "password")
+	private WebElement passwordFieldElement;
+	@FindBy(name = "submit")
+	private WebElement loginButtonElement;
+	@FindBy(tagName = "input")
+	private List<WebElement> fields;
 	
-	private By userField;
-	private By passwordField;
-	private By loginButton;
 	private By flightsLink;
-	private By fields;
-	
+		
 	public PageLogin (WebDriver driver) {
 		this.driver = driver;
-		userField = By.name("userName");
-		passwordField = By.name("password");
-		loginButton = By.name("submit");
 		flightsLink = By.xpath("/html/body/div[2]/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[2]/td[2]/a");
-		fields = By.tagName("input");
+		PageFactory.initElements(driver, this);
 	}
 	
 	public void login (String user, String pass) {
-		//System.out.println(userFieldElement);
-		//userFieldElement.sendKeys(user);
-		driver.findElement(userField).sendKeys(user);
-		driver.findElement(passwordField).sendKeys(pass);
-		driver.findElement(loginButton).click();		
+		userFieldElement.sendKeys(user);
+		passwordFieldElement.sendKeys(pass);
+		loginButtonElement.click();
 		Helpers.sleep(driver);
 	}
 	
 	public void fields_login(String user, String pass) {
-		List<WebElement> loginFields = driver.findElements(fields);
-		loginFields.get(1).sendKeys(user);
-		loginFields.get(2).sendKeys(pass);
+		//List<WebElement> loginFields = driver.findElements(fields);
+		fields.get(1).sendKeys(user);
+		fields.get(2).sendKeys(pass);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	public void verifyFields() {
-		List<WebElement> loginFields = driver.findElements(fields);
-		System.out.println(loginFields.size());
-		Assert.assertTrue(loginFields.size()==4);
+		//List<WebElement> loginFields = driver.findElements(fields);
+		System.out.println(fields.size());
+		Assert.assertTrue(fields.size()==4);
 	}
 	
 	public void flights() {

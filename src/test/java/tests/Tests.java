@@ -78,7 +78,7 @@ public class Tests {
 	public void pruebaCantidadDeCampos() {		
 		PageLogin pageLogin = new PageLogin(driver);
 		pageLogin.verifyFields();
-		pageLogin.login("user", "user");
+		pageLogin.fields_login("user", "user");
 	}
 	
 	@AfterMethod
