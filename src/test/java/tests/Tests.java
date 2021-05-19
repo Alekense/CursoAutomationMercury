@@ -43,7 +43,7 @@ public class Tests {
 		Helpers.sleep(driver);
 	}
 	
-	@Test
+	@Test(description = "Login Correcto")
 	public void pruebaUno() {
 		//WebDriverManager.setWindowSize(driver, "fullscreen");
 		//driver.switchTo().window(tabs.get(1)).navigate().to("https://www.infobae.com/");
@@ -54,7 +54,7 @@ public class Tests {
 		pageLogon.assertLogonPage();				
 	}
 	
-	@Test
+	@Test(description = "Maximizar y abrir pagina de reservas")
 	public void pruebaDos() {
 		WebDriverManager.setWindowSize(driver, "maximized");
 		PageLogin pageLogin = new PageLogin(driver);
@@ -63,7 +63,7 @@ public class Tests {
 		pageReservation.assertPage();				
 	}
 	
-	@Test
+	@Test(description = "Redimensionar y setear reserva")
 	public void pruebaTres() {
 		WebDriverManager.setWindowSize(driver, 800, 600);
 		PageLogin pageLogin = new PageLogin(driver);
@@ -74,14 +74,14 @@ public class Tests {
 		pageReservation.selectToPort("Frankfurt");		
 	}
 	
-	@Test
+	@Test(description="Verificar el array tagname y el logueo con campos")
 	public void pruebaCantidadDeCampos() {		
 		PageLogin pageLogin = new PageLogin(driver);
 		pageLogin.verifyFields();
 		pageLogin.fields_login("user", "user");
 	}
 	
-	@Test
+	@Test(description = "Obtener el titulo de la pagina y utilizarlo")
 	public void pruebaTituloEnUsuario() {
 		PageLogin pageLogin = new PageLogin(driver);
 		pageLogin.putTitleInUserField();
@@ -89,6 +89,8 @@ public class Tests {
 	
 	@AfterMethod
 	public void tearDown(ITestResult result) {
+		String ok = "OK", error = "ERROR";
+		System.out.println("El test " + result.getMethod().getDescription() + "resulto: "+ (result.getStatus()==1?ok:error));
 		if(!result.isSuccess()) {
 			Screenshooter.takeScreenshot("ERROR", driver);
 		}

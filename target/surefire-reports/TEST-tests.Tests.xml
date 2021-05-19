@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="tests.Tests" time="4.853" errors="0" skipped="0">
+<testsuite tests="15" failures="1" name="tests.Tests" time="64.575" errors="0" skipped="14">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_291\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\ferrufia\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf13655444420975686935.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\ferrufia\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7514123576347216127.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jre1.8.0_291\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Users/ferrufia/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin/server;C:/Users/ferrufia/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\oracle\product\12.1.0\client_1;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\PuTTY\;D:\HPE\Unified Functional Testing\bin;D:\app\client\FERRUFIA\product\12.1.0\client_1\BIN;D:\Java\apache-maven-3.8.1\bin;D:\Git\cmd;C:\Users\ferrufia\AppData\Local\Microsoft\WindowsApps;;C:\WINDOWS\system32;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,9 +61,142 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="tests.Tests" name="pruebaCantidadDeCampos" time="0.273"/>
-  <testcase classname="tests.Tests" name="pruebaDos" time="1.218"/>
-  <testcase classname="tests.Tests" name="pruebaTituloEnUsuario" time="0.194"/>
-  <testcase classname="tests.Tests" name="pruebaTres" time="1.833"/>
-  <testcase classname="tests.Tests" name="pruebaUno" time="1.335"/>
+  <testcase classname="tests.Tests" name="setUp" time="64.566">
+    <failure message="chrome not reachable
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;W10BOOKCORDEROA&apos;, ip: &apos;172.24.48.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_291&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00C0C013+2474003]
+	Ordinal0 [0x00BA29C1+2042305]
+	Ordinal0 [0x00AB2E30+1060400]
+	Ordinal0 [0x00AA7743+1013571]
+	Ordinal0 [0x00AD1282+1184386]
+	Ordinal0 [0x00ACD600+1168896]
+	Ordinal0 [0x00ACAA83+1157763]
+	Ordinal0 [0x00AFA2A2+1352354]
+	Ordinal0 [0x00AF8FAA+1347498]
+	Ordinal0 [0x00AF66DB+1337051]
+	Ordinal0 [0x00AD3427+1192999]
+	Ordinal0 [0x00AD42EE+1196782]
+	Ordinal0 [0x00AD4279+1196665]
+	GetHandleVerifier [0x00D996FC+1590332]
+	GetHandleVerifier [0x00E48614+2306900]
+	GetHandleVerifier [0x00C99E93+543699]
+	GetHandleVerifier [0x00C992CE+540686]
+	Ordinal0 [0x00BA86BA+2066106]
+	Ordinal0 [0x00BAD1C8+2085320]
+	Ordinal0 [0x00BAD308+2085640]
+	Ordinal0 [0x00BB67F3+2123763]
+	BaseThreadInitThunk [0x76858654+36]
+	RtlGetAppContainerNamedObjectPath [0x771B4A47+311]
+	RtlGetAppContainerNamedObjectPath [0x771B4A17+263]
+" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: chrome not reachable
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;W10BOOKCORDEROA&apos;, ip: &apos;172.24.48.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_291&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00C0C013+2474003]
+	Ordinal0 [0x00BA29C1+2042305]
+	Ordinal0 [0x00AB2E30+1060400]
+	Ordinal0 [0x00AA7743+1013571]
+	Ordinal0 [0x00AD1282+1184386]
+	Ordinal0 [0x00ACD600+1168896]
+	Ordinal0 [0x00ACAA83+1157763]
+	Ordinal0 [0x00AFA2A2+1352354]
+	Ordinal0 [0x00AF8FAA+1347498]
+	Ordinal0 [0x00AF66DB+1337051]
+	Ordinal0 [0x00AD3427+1192999]
+	Ordinal0 [0x00AD42EE+1196782]
+	Ordinal0 [0x00AD4279+1196665]
+	GetHandleVerifier [0x00D996FC+1590332]
+	GetHandleVerifier [0x00E48614+2306900]
+	GetHandleVerifier [0x00C99E93+543699]
+	GetHandleVerifier [0x00C992CE+540686]
+	Ordinal0 [0x00BA86BA+2066106]
+	Ordinal0 [0x00BAD1C8+2085320]
+	Ordinal0 [0x00BAD308+2085640]
+	Ordinal0 [0x00BB67F3+2123763]
+	BaseThreadInitThunk [0x76858654+36]
+	RtlGetAppContainerNamedObjectPath [0x771B4A47+311]
+	RtlGetAppContainerNamedObjectPath [0x771B4A17+263]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at tests.Tests.setUp(Tests.java:36)
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@4b6995df
+</system-out>
+    <system-err>Starting ChromeDriver 90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}) on port 25245
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+</system-err>
+  </testcase>
+  <testcase classname="tests.Tests" name="pruebaCantidadDeCampos" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="setUp" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="pruebaDos" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="setUp" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="pruebaTituloEnUsuario" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="setUp" time="0.002">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="pruebaTres" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="tearDown" time="0.001">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="setUp" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="pruebaUno" time="0">
+    <skipped/>
+  </testcase>
+  <testcase classname="tests.Tests" name="tearDown" time="0">
+    <skipped/>
+  </testcase>
 </testsuite>
