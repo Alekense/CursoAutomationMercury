@@ -5,14 +5,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -26,7 +29,23 @@ import pages.PageLogon;
 import pages.PageReservation;
 
 public class Login extends CondicionesComunes{	
-	@Test(description = "Login Correcto")
+	
+	@Test
+	public void myTest() {
+		/*
+		boolean exist = true;
+		try {
+			driver.findElement(By.name("pepito"));
+		} catch(NoSuchElementException e) {
+			exist = false;
+		}
+		Assert.assertTrue(exist,"El elemento no existe");
+		*/
+		boolean exist = driver.findElements(By.className("NoExiste")).size() != 0;
+		Assert.assertTrue(exist,"El elemento No Existe");
+	}
+	
+	@Test(description = "Login Correcto", enabled = false)
 	public void pruebaUno() {
 		//WebDriverManager.setWindowSize(driver, "fullscreen");
 		//driver.switchTo().window(tabs.get(1)).navigate().to("https://www.infobae.com/");
